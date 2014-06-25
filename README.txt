@@ -1,4 +1,4 @@
-This aaplication attempts to abstract some of the most general data exploration needs to a single interactive web app.
+This aplication attempts to abstract some of the most general data exploration needs to a single interactive web app.
 Using ggplot to organize and render graphics and shiny for its rich web app utilities, the exploration stage of
 data analysis is organized into a one-stop shop. See 1 (1 continuous) to 5 (2 continuous and 3 categorical) 
 dimensions at once by plotting either x data alone (histogram or frequency plot) or x versus y (scatterplot)

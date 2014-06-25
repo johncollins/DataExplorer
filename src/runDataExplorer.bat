@@ -1,0 +1,1 @@
+R CMD BATCH %0\..\runDataExplorer.R

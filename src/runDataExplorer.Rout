@@ -1,0 +1,55 @@
+
+R version 2.14.1 (2011-12-22)
+Copyright (C) 2011 The R Foundation for Statistical Computing
+ISBN 3-900051-07-0
+Platform: i386-pc-mingw32/i386 (32-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # runDataExplorer.R
+> # ==============================================================================
+> # I am the abstract R script that runs the shiny app. I am run by the shell.
+> # I set up paths, read the settings file and load the data
+> 
+> # customizable portion
+> ignore.names <- c()
+> categorical.names <- c()
+> continuous.names <- c()
+> # End customizable portion
+> 
+> require(shiny)
+Loading required package: shiny
+Warning message:
+package 'shiny' was built under R version 2.14.2 
+> 
+> folder.address <- getwd()
+> print(folder.address)
+[1] "C:/Users/jcollins/Desktop/MyStuff/Projects/DataExplorer/src"
+> settings <- read.csv(file.path(folder.address, '../settings.txt'), 
++                      sep=',', quote='"', header=T, stringsAsFactors=F)
+> 
+> if (is.null(settings$location) || is.null(settings$name)) {
++ 	print('Cannot find data. Specify a location and data frame in settings.txt')
++ 	quit()
++ }
+> 
+> # the dataset named below must exist in the RData file loaded from data location
+> load(settings$location)
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file 'path/to/my/archive', probable reason 'No such file or directory'
+Execution halted

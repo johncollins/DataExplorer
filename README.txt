@@ -5,13 +5,14 @@ dimensions at once by plotting either x data alone (histogram or frequency plot)
 while each can be augmented with three other pieces of data stratified by color, and/or rows, and/or columns.
 Continuous variables may be transformed and continuous or categorical variables may be specified by the user or,
 if not specified manually will be interpreted from the classes of the columns in the data frame. In addition, the
-sample size can be specifed by slider and jittering, and linear and nonlinear fittings are specifiable via checkboxes.
+sample size can be specifed by slider and jittering. Further, linear and nonlinear-spline fits can be specified 
+or omitted.
 
 Sample workflow:
 ----------------
-(1) Load your data into a data frame prepare and 
-(2) Prepare by Giving all your data appropriate classes; especially distinguish between numeric and factors
-(3) save as an archive (<something>.RData) and edit settings.txt to point at the archive and the data.frame inside
+(1) Load your data into a data frame
+(2) Prepare by Giving all your data appropriate classes; especially distinguish between numeric and factors and cast data appropriately
+(3) Save as an archive (<something>.RData) and edit settings.txt to point at the archive and the data.frame inside
 (3) Specify variables to ignore in runDataExplorer.R's variable ignore.names and if you want to explicity fix the 
 	datatype of any variable, do so here also
 (4) Run the startup script and start visualizing

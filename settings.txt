@@ -1,2 +1,2 @@
 "location","name"
-path/to/my/archive,<name of data.frame in archive>
+C:/Users/jcollins/Desktop/MyStuff/Projects/DataExplorer/DataExplorer/data/aids.RData,aids

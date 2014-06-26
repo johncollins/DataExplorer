@@ -7,7 +7,7 @@ shinyServer(function(input, output) {
   output$plot <- renderPlot({
     
     df <- get_dataset()
-    
+
     if (input$y != 'None') {
       p <- ggplot(df, aes_string(x=input$x, y=input$y)) + geom_point()
       
@@ -38,15 +38,17 @@ shinyServer(function(input, output) {
       p <- p + scale_x_continuous(trans=input$xtrans)
     }
     
-    if (input$color != 'None')
-      p <- p + aes_string(color=input$color)
-    
+    if (input$color != 'None') {
+		p <- p + aes_string(color=input$color)
+    }
+	
     facets <- paste(input$facet_row, '~', input$facet_col)
-    if (facets != '. ~ .')
-      p <- p + facet_grid(facets)
+    if (facets != '. ~ .') {
+		p <- p + facet_grid(facets)
+	}
     
     print(p)
     
-  }, height=700)
+  }, height=400)
   
 })

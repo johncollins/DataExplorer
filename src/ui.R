@@ -5,7 +5,7 @@ shinyUI(pageWithSidebar(
   sidebarPanel(
  
     sliderInput('sampleSize', 'Sample Size', min=1, max=nrow(dataset),
-                value=min(1000, nrow(dataset)), step=500, round=0),
+                value=min(1000, nrow(dataset)), step=50, round=0),
     
     selectInput('x', 'X', continuous.names),
 	selectInput('xtrans', 'X Transformation',c('None', 'log10', 'log2', 'log', 'sqrt')),
@@ -14,9 +14,9 @@ shinyUI(pageWithSidebar(
     
     checkboxInput('jitter', 'Jitter'),
     checkboxInput('smooth', 'Smooth'),
-	  checkboxInput('line', 'Line'),
+	checkboxInput('line', 'Line'),
   
-	  selectInput('color', 'Color', c('None', categorical.names)),  
+	selectInput('color', 'Color', c('None', categorical.names)),  
     selectInput('facet_row', 'Facet Row', c(None='.', categorical.names)),
     selectInput('facet_col', 'Facet Column', c(None='.', categorical.names))
   ),

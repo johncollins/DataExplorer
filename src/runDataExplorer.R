@@ -12,7 +12,7 @@ continuous.names <- c()
 require(shiny)
 
 folder.address <- getwd()
-print(folder.address)
+
 settings <- read.csv(file.path(folder.address, '../settings.txt'), 
                      sep=',', quote='"', header=T, stringsAsFactors=F)
 
@@ -23,6 +23,7 @@ if (is.null(settings$location) || is.null(settings$name)) {
 
 # the dataset named below must exist in the RData file loaded from data location
 load(settings$location)
+
 dataset <- eval(parse(text=settings$name))
 
 runApp(folder.address, launch.browser=TRUE)

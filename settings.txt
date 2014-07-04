@@ -1,2 +1,2 @@
 "location","name"
-C:/Users/jcollins/Desktop/MyStuff/Projects/DataExplorer/DataExplorer/data/aids.RData,aids
+/Users/johnssocks/Documents/DataExplorer/DataExplorer/data/aids.RData,aids

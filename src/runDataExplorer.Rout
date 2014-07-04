@@ -1,0 +1,55 @@
+
+R version 3.1.0 (2014-04-10) -- "Spring Dance"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin10.8.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # runDataExplorer.R
+> # ==============================================================================
+> # I am the abstract R script that runs the shiny app. I am run by the shell.
+> # I set up paths, read the settings file and load the data
+> 
+> # customizable portion
+> ignore.names <- c()
+> categorical.names <- c()
+> continuous.names <- c()
+> # End customizable portion
+> 
+> require(shiny)
+Loading required package: shiny
+> 
+> folder.address <- getwd()
+> 
+> settings <- read.csv(file.path(folder.address, '../settings.txt'), 
++                      sep=',', quote='"', header=T, stringsAsFactors=F)
+> 
+> if (is.null(settings$location) || is.null(settings$name)) {
++ 	print('Cannot find data. Specify a location and data frame in settings.txt')
++ 	quit()
++ }
+> 
+> # the dataset named below must exist in the RData file loaded from data location
+> load(settings$location)
+> 
+> dataset <- eval(parse(text=settings$name))
+> 
+> runApp(folder.address, launch.browser=TRUE)
+
+Listening on http://127.0.0.1:7689
+stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
+stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
+
+Execution halted

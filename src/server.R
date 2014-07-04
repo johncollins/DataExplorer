@@ -48,7 +48,15 @@ shinyServer(function(input, output) {
 	}
     
     print(p)
-    
+     
+    output$downloadPlot <- downloadHandler(
+        filename = function(){file.path(getwd(), 'tmp.png')},
+        content = function(file) {
+                  png(file)
+                  print(p)
+                  dev.off()
+        })
+
   }, height=400)
   
 })

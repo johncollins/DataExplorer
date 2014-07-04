@@ -18,7 +18,8 @@ shinyUI(pageWithSidebar(
   
 	selectInput('color', 'Color', c('None', categorical.names)),  
     selectInput('facet_row', 'Facet Row', c(None='.', categorical.names)),
-    selectInput('facet_col', 'Facet Column', c(None='.', categorical.names))
+    selectInput('facet_col', 'Facet Column', c(None='.', categorical.names)),
+    downloadButton('downloadPlot', 'Download Plot')
   ),
  
   mainPanel(

@@ -1,5 +1,6 @@
 .RHistory
 settings.txt
+*.Rout
 
 #################
 ## Eclipse

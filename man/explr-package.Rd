@@ -1,5 +1,4 @@
 \name{explr-package}
-\alias{explr-package}
 \alias{explr}
 \docType{package}
 \title{
@@ -18,11 +17,11 @@ Version: \tab 0.1\cr
 Date: \tab 2014-07-22\cr
 License: \tab MIT\cr
 }
-library(MASS) # load the aids dataset
-explr(Aids2)
+library(MASS) # load the aids dataset \cr
+explr(Aids2) # visualize your data
 }
 \author{
-John Collins
+John Collins \cr
 Maintainer: John Collins <johnssocks@gmail.com>
 }
 \references{

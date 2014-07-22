@@ -1,4 +1,14 @@
-explr <- function(dataset) {
+#' Explore a data frame visually
+#' 
+#' Explore my dataset visually using an interactive shiny app
+#' @param dataset a data frame to explore
+#' @keywords shiny exploratory explore visualize 5D 5d five-dimensional
+#' @export
+#' @examples 
+#' library(MASS)
+#' dexplr(Aids2)
+
+dexplr <- function(dataset) {
   classes.names <- lapply(dataset, function(x)class(x))
   
   # ignore.names are the variables to ignore in exploration

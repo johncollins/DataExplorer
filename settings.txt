@@ -1,2 +1,0 @@
-"location","name"
-/Users/johnssocks/Documents/DataExplorer/DataExplorer/data/aids.RData,aids

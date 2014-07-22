@@ -4,6 +4,7 @@ explr
 A Shiny App For Viewing a dataset in up to 5 dimensions at once
 
 If you don't have devtools installed:
+
     ```R
     install.packages("devtools")
 
@@ -11,6 +12,7 @@ If you don't have devtools installed:
     ```
     
 Then:
+
     ```R
     install_github('explr', 'johncollins')
     
@@ -18,6 +20,7 @@ Then:
     ```
 
 And explore away to your hearts content:
+
     ```R
     library(MASS)
 

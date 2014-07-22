@@ -1,4 +1,4 @@
-Package: DataExplorer
+Package: explr
 Title: Aloows one to explore a dataset
 Version: 0.1
 Authors@R: "John Collins johnssocks@gmail.com [aut, cre]"

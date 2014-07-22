@@ -7,23 +7,20 @@ If you don't have devtools installed:
 
 ```R
 install.packages("devtools")
-
 library(devtools)
 ```
     
 Then:
 
-    ```R
-    install_github('explr', 'johncollins')
-    
-    library(explr)
-    ```
+```R
+install_github('explr', 'johncollins')
+library(explr)
+```
 
 And explore away to your hearts content:
 
-    ```R
-    library(MASS)
-
-    explr(Aids2)
-    ```
+```R
+library(MASS)
+explr(Aids2)
+```
   

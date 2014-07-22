@@ -3,17 +3,29 @@
 \alias{dexplr}
 \title{Explore a data frame visually}
 \usage{
-dexplr(dataset)
+dexplr(dataset, ignore.names = c(),
+  categorical.names = filter.by.type(dataset, classes.names, c("ordered",
+  "logical", "factor")), continuous.names = filter.by.type(dataset,
+  classes.names, c("integer", "numeric", "Date", "ordered")))
 }
 \arguments{
 \item{dataset}{a data frame to explore}
+
+\item{ignore.names}{column names to ignore in exploration}
+
+\item{categorical.names}{column names to treat as categorical (discrete)}
+
+\item{continuous.names}{column names to treat as continuous}
 }
 \description{
 Explore my dataset visually using an interactive shiny app
 }
 \examples{
+\dontrun{
 library(MASS)
 dexplr(Aids2)
+q(save='no')
+}
 }
 \keyword{5D}
 \keyword{5d}

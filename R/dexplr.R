@@ -2,42 +2,29 @@
 #' 
 #' Explore my dataset visually using an interactive shiny app
 #' @param dataset a data frame to explore
+#' @param ignore.names column names to ignore in exploration
+#' @param categorical.names column names to treat as categorical (discrete)
+#' @param continuous.names column names to treat as continuous
 #' @keywords shiny exploratory explore visualize 5D 5d five-dimensional
+#' @import ggplot2 shiny
 #' @export
 #' @examples 
+#' \dontrun{
 #' library(MASS)
 #' dexplr(Aids2)
+#' q(save='no')
+#' }
 
-dexplr <- function(dataset) {
+dexplr <- function(dataset, ignore.names=c(), 
+                   categorical.names = filter.by.type(dataset, classes.names, 
+                      c('ordered', 'logical', 'factor')),
+                   continuous.names = filter.by.type(dataset, classes.names, 
+                      c('integer', 'numeric', 'Date', 'ordered'))) {
+  
+  #require(shiny)
+  #require(ggplot2)
+  
   classes.names <- lapply(dataset, function(x)class(x))
-  
-  # ignore.names are the variables to ignore in exploration
-  if (!exists('ignore.names')) {
-    ignore.names <- c()
-  }
-  
-  if (!is.null(ignore.names)) {
-    classes.names <- classes.names[!names(dataset) %in% ignore.names]
-  }
-  
-  # categorical.names are those with which to facet by and color with
-  cat.names <- filter.by.type(dataset, classes.names, c('ordered', 'logical', 'factor'))
-  if (!exists('categorical.names')) {
-    categorical.names <- cat.names
-  } else {
-    categorical.names <- union(cat.names, categorical.names)
-  }
-  
-  # continuous.names are those to treat numerically
-  cont.names <- filter.by.type(dataset, classes.names, c('integer', 'numeric', 'Date', 'ordered'))
-  if (!exists('continuous.names')) {
-    continuous.names <- cont.names
-  } else {
-    continuous.names <- union(cont.names, continuous.names)
-  }
-  
-  require(shiny)
-  require(ggplot2)
   
   shinyApp(ui = pageWithSidebar(
     
@@ -118,8 +105,9 @@ dexplr <- function(dataset) {
       
       print(p)
       
+      # Allow the plot to be downloaded to the user's machines
       output$downloadPlot <- downloadHandler(
-        filename = function(){file.path(getwd(), 'tmp.png')},
+        filename = function(){'tmp.png'},
         content = function(file) {
           png(file)
           print(p)

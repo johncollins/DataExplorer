@@ -1,0 +1,8 @@
+Package: DataExplorer
+Title: Aloows one to explore a dataset
+Version: 0.1
+Authors@R: "John Collins johnssocks@gmail.com [aut, cre]"
+Description: shiny app to explore a dataset
+Depends: R (>= 3.1.0)
+License: MIT
+LazyData: true

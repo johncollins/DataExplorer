@@ -6,10 +6,10 @@ A Shiny App For Viewing a dataset in up to 5 dimensions at once
 Install from GitHub:
 
     If you don't have devtools installed:
-    ```R
-    install.packages("devtools")
-    library(devtools)
-    ```
+        ```R
+        install.packages("devtools")
+        library(devtools)
+        ```
     
     Then:
     ```R

@@ -19,7 +19,7 @@ Date: \tab 2014-07-22\cr
 License: \tab MIT\cr
 }
 library(MASS) # load the aids dataset
-explr(aids)
+explr(Aids2)
 }
 \author{
 John Collins

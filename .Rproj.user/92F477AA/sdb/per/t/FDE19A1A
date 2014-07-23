@@ -1,0 +1,16 @@
+{
+    "contents" : "#' filter.by.type\n#' \n#' Utility function to return a subset of names from a data.frame\n#' which match the recignized classes in classes.list, given that\n#' each name may have multiple classes in names.list ( a list)\n#' @param dataset a data frame\n#' @param classes.names vector of allowable column types\n#' @param names.list list of vectors representing the classes of each column\n#' @keywords filter names\n#' @export\n#' @examples \n#' X <- data.frame(X=factor(c(1,2,1,2)), Y=c(1.1, 1.2, pi, 23.*2))\n#' filter.by.type(X, c('factor', 'ordinal'), list(X=c('factor'), Y=c('numeric'))) \n\nfilter.by.type <- function(dataset, classes.names, names.list) {\n  names(dataset)[unlist(lapply(classes.names,  function(x)length(intersect(x, names.list)) > 0))]\n}\n",
+    "created" : 1406048882943.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "285760850",
+    "id" : "FDE19A1A",
+    "lastKnownWriteTime" : 1406057518,
+    "path" : "~/Documents/explr/R/filter.by.type.R",
+    "project_path" : "R/filter.by.type.R",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

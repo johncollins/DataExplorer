@@ -2,9 +2,6 @@
 markdown:         kramdown
 highlighter:      true
 
-# Permalinks
-permalink:        pretty
-
 # Setup
 title:            explr
 tagline:          'A shiny app for visualizing a data frame'

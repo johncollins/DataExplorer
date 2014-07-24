@@ -15,16 +15,18 @@
 #' q(save='no')
 #' }
 
-dexplr <- function(dataset, ignore.names=c(), 
-                   categorical.names = filter.by.type(dataset, classes.names, 
-                      c('ordered', 'logical', 'factor')),
-                   continuous.names = filter.by.type(dataset, classes.names, 
-                      c('integer', 'numeric', 'Date', 'ordered'))) {
-  
-  #require(shiny)
-  #require(ggplot2)
+dexplr <- function(dataset, ignore.names=c(), categorical.names = c(), continuous.names = c()) {
   
   classes.names <- lapply(dataset, function(x)class(x))
+  if (ignore.names == c()) {
+    ignore.names = filter.by.type(dataset, classes.names, c('character')),
+  }
+  if (categorical.names == c()) {
+    categorical.names = filter.by.type(dataset, classes.names, c('ordered', 'logical', 'factor'))
+  }
+  if (continuous.names == c()) {
+    continuous.names = filter.by.type(dataset, classes.names, c('integer', 'numeric', 'Date', 'ordered'))
+  }
   
   shinyApp(ui = pageWithSidebar(
     

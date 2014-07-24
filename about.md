@@ -31,15 +31,10 @@ Otherwise:
 
 ## Quickstart:
 
-```R
-library(explr)
-
-?dexplr
-
-library(MASS)
-
-dexplr(Aids2)
-```
+    library(explr)
+    ?dexplr
+    library(MASS)
+    dexplr(Aids2)
 
 A browser window will open with the application running.
 

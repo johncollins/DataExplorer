@@ -1,5 +1,5 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         kramdown
 highlighter:      true
 
 # Permalinks
@@ -10,7 +10,7 @@ title:            explr
 tagline:          'A shiny app for visualizing a data frame'
 description:      'A simple but useful application for visualizing a dataset in up to five dimensions at once'
 url:              https://johncollins.github.io/explr
-baseurl:          'http://johncollins.github.io/explr/'
+baseurl:          '/' #'http://johncollins.github.io/explr/'
 paginate:         5
 
 author:

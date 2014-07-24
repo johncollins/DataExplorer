@@ -23,4 +23,5 @@ And explore away to your hearts content:
 library(MASS)
 explr(Aids2)
 ```
-  
+
+Find more examples and dogumentation [here](https://johncollins.github.io/explr/).

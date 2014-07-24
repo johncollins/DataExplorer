@@ -12,7 +12,7 @@ description:      'A simple but useful application for visualizing a dataset in 
 url:              https://johncollins.github.io/explr
 baseurl:          'http://johncollins.github.io/explr/'
 paginate:         5
-
+home:             'http://johncollins.github.io/explr/'
 author:
   name:           'John Collins'
   url:            https://github.com/johncollins/

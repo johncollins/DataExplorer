@@ -3,10 +3,8 @@
 \alias{dexplr}
 \title{Explore a data frame visually}
 \usage{
-dexplr(dataset, ignore.names = c(),
-  categorical.names = filter.by.type(dataset, classes.names, c("ordered",
-  "logical", "factor")), continuous.names = filter.by.type(dataset,
-  classes.names, c("integer", "numeric", "Date", "ordered")))
+dexplr(dataset, ignore.names = c(), categorical.names = c(),
+  continuous.names = c())
 }
 \arguments{
 \item{dataset}{a data frame to explore}

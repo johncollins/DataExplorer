@@ -18,13 +18,13 @@
 dexplr <- function(dataset, ignore.names=c(), categorical.names = c(), continuous.names = c()) {
   
   classes.names <- lapply(dataset, function(x)class(x))
-  if (ignore.names == c()) {
-    ignore.names = filter.by.type(dataset, classes.names, c('character')),
+  if (is.null(ignore.names)) {
+    ignore.names = filter.by.type(dataset, classes.names, c('character'))
   }
-  if (categorical.names == c()) {
+  if (is.null(categorical.names)) {
     categorical.names = filter.by.type(dataset, classes.names, c('ordered', 'logical', 'factor'))
   }
-  if (continuous.names == c()) {
+  if (is.null(continuous.names)) {
     continuous.names = filter.by.type(dataset, classes.names, c('integer', 'numeric', 'Date', 'ordered'))
   }
   
@@ -67,7 +67,7 @@ dexplr <- function(dataset, ignore.names=c(), categorical.names = c(), continuou
       df <- get_dataset()
       
       if (input$y != 'None') {
-        p <- ggplot(df, aes_string(x=input$x, y=input$y)) + geom_point()
+        p <- ggplot(df, aes_string(x=input$x, y=input$y), na.rm=T) + geom_point()
         
         if (input$ytrans != 'None') {
           p <- p + scale_y_continuous(trans=input$ytrans)

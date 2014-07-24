@@ -23,7 +23,7 @@ From R command line, if you don't already have devtools installed:
 
     install.packages(devtools)
 
-Otherwise:
+Then:
 
     library(devtools)
     install_github('explr', 'johncollins')

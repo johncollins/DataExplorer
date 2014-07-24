@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      About &middot; explr
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body>
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A simple but useful application for visualizing a dataset in up to five dimensions at once</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item active" href="/about/">About</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+
+    <a class="sidebar-nav-item" href="https://github.com/johncollins/explr/archive/v0.1.0.zip">Download</a>
+    <a class="sidebar-nav-item" href="https://github.com/johncollins/explr">GitHub project</a>
+    <span class="sidebar-nav-item">Currently v0.1.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2014. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">explr</a>
+            <small>A shiny app for visualizing a data frame</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="page">
+  <h1 class="page-title">About</h1>
+  <p class="message">
+  explr - A shiny app for visualizing a data frame in R
+</p>
+
+<p>The application allows you to:</p>
+
+<ul>
+<li>Select different variables to view on just x, or x v y axes (continuous variables)</li>
+<li>Achieve 5D visualizing by faceting on color, width and column (discrete variables)</li>
+<li>Transform your numbers using some standard transformations</li>
+<li>jitter points</li>
+<li>Fit lines or splines to your plots</li>
+<li>Download an image to share</li>
+</ul>
+
+<h2>Install from GitHub:</h2>
+
+<p>From R command line, if you don&#39;t already have devtools installed:</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="o">&gt;</span> install.packages<span class="p">(</span>devtools<span class="p">)</span>
+</code></pre></div>
+<p>Otherwise:</p>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="o">&gt;</span> <span class="kn">library</span><span class="p">(</span>devtools<span class="p">)</span>
+<span class="o">&gt;</span> install_github<span class="p">(</span><span class="s">&#39;explr&#39;</span><span class="p">,</span> <span class="s">&#39;johncollins&#39;</span><span class="p">)</span>
+</code></pre></div>
+<h2>Quickstart:</h2>
+<div class="highlight"><pre><code class="language-R" data-lang="R"><span class="o">&gt;</span> <span class="kn">library</span><span class="p">(</span>explr<span class="p">)</span>
+<span class="o">&gt;</span> <span class="o">?</span>dexplr
+<span class="o">&gt;</span> <span class="kn">library</span><span class="p">(</span>MASS<span class="p">)</span>
+<span class="o">&gt;</span> dexplr<span class="p">(</span>Aids2<span class="p">)</span>
+</code></pre></div>
+<p>A browser window will open with the application running.</p>
+
+<h2>Contact:</h2>
+
+<p>Have questions or suggestions? Feel free to <a href="https://github.com/johncollins/explr/issues/new">open an issue on GitHub</a></p>
+
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

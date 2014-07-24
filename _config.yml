@@ -9,10 +9,10 @@ permalink:        pretty
 title:            explr
 tagline:          'A shiny app for visualizing a data frame'
 description:      'A simple but useful application for visualizing a dataset in up to five dimensions at once'
-url:              https://johncollins.github.io/explr
+url:              https://johncollins.github.io/explr/
 baseurl:          'http://johncollins.github.io/explr/'
 paginate:         5
-home:             'http://johncollins.github.io/explr/'
+
 author:
   name:           'John Collins'
   url:            https://github.com/johncollins/

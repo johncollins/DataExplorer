@@ -21,13 +21,13 @@ The application allows you to:
 
 From R command line, if you don't already have devtools installed:
 
-```R
+```
 install.packages(devtools)
 ```
 
 Otherwise:
 
-```R
+```
 library(devtools)
 
 install_github('explr', 'johncollins')

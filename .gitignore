@@ -1,6 +1,7 @@
 .RHistory
 settings.txt
 *.Rout
+_site
 
 #################
 ## Eclipse

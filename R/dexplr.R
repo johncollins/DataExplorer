@@ -35,7 +35,7 @@ dexplr <- function(dataset, ignore.names=c(), categorical.names = c(), continuou
     sidebarPanel(
       
       sliderInput('sampleSize', 'Sample Size', min=1, max=nrow(dataset),
-                  value=min(1000, nrow(dataset)), step=50, round=0),
+                  value=min(1000, nrow(dataset)), step=NULL, round=0),
       
       selectInput('x', 'X', continuous.names),
       selectInput('xtrans', 'X Transformation',c('None', 'log10', 'log2', 'log', 'sqrt')),
@@ -49,6 +49,7 @@ dexplr <- function(dataset, ignore.names=c(), categorical.names = c(), continuou
       selectInput('color', 'Color', c('None', categorical.names)),  
       selectInput('facet_row', 'Facet Row', c(None='.', categorical.names)),
       selectInput('facet_col', 'Facet Column', c(None='.', categorical.names)),
+
       downloadButton('downloadPlot', 'Download Plot')
     ),
     
@@ -85,10 +86,10 @@ dexplr <- function(dataset, ignore.names=c(), categorical.names = c(), continuou
       }
       else {
         if (input$color != 'None') {
-          p <- ggplot(df, aes_string(x=input$x)) + geom_freqpoly()
+          p <- ggplot(df, aes_string(x=input$x), na.rm=T) + geom_freqpoly()
         }
         else {
-          p <- ggplot(df, aes_string(x=input$x)) + geom_histogram(fill='magenta', alpha=0.3)
+          p <- ggplot(df, aes_string(x=input$x), na.rm=T) + geom_histogram(fill='magenta', alpha=0.3)
         }
       }
       

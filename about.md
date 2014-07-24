@@ -21,17 +21,13 @@ The application allows you to:
 
 From R command line, if you don't already have devtools installed:
 
-```
-install.packages(devtools)
-```
+    install.packages(devtools)
 
 Otherwise:
 
-```
-library(devtools)
+    library(devtools)
+    install_github('explr', 'johncollins')
 
-install_github('explr', 'johncollins')
-```
 
 ## Quickstart:
 

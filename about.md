@@ -22,23 +22,27 @@ The application allows you to:
 From R command line, if you don't already have devtools installed:
 
 ```R
-> install.packages(devtools)
+install.packages(devtools)
 ```
 
 Otherwise:
 
 ```R
-> library(devtools)
-> install_github('explr', 'johncollins')
+library(devtools)
+
+install_github('explr', 'johncollins')
 ```
 
 ## Quickstart:
 
 ```R
-> library(explr)
-> ?dexplr
-> library(MASS)
-> dexplr(Aids2)
+library(explr)
+
+?dexplr
+
+library(MASS)
+
+dexplr(Aids2)
 ```
 
 A browser window will open with the application running.

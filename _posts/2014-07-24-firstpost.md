@@ -12,4 +12,4 @@ selection of variables, transformations, and model fitting as well as a button
 for downloading a given plot. Example using the Aids2 dataset from the MASS
 library.
 
-<img src="/images/5Dscatter_aids_example.png"> 
+<img src="{{ site.baseurl }}images/5Dscatter_aids_example.png"> 

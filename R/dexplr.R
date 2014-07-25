@@ -30,7 +30,7 @@ dexplr <- function(dataset, ignore.names=c(), categorical.names = c(), continuou
   
   shinyApp(ui = pageWithSidebar(
     
-    headerPanel("Data Explorer"),
+    headerPanel("explr"),
     
     sidebarPanel(
       

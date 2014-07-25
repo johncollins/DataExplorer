@@ -30,12 +30,12 @@ dexplr <- function(dataset, ignore.names=c(), categorical.names = c(), continuou
   
   shinyApp(ui = pageWithSidebar(
     
-    headerPanel("explr"),
+    headerPanel(paste("explr-ing", deparse(substitute(df)))),
     
     sidebarPanel(
       
       sliderInput('sampleSize', 'Sample Size', min=1, max=nrow(dataset),
-                  value=min(1000, nrow(dataset)), step=NULL, round=0),
+                  value=min(1000, nrow(dataset)), step=1, round=F),
       
       selectInput('x', 'X', continuous.names),
       selectInput('xtrans', 'X Transformation',c('None', 'log10', 'log2', 'log', 'sqrt')),

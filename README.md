@@ -24,4 +24,4 @@ library(MASS)
 explr(Aids2)
 ```
 
-Find more examples and dogumentation [here](https://johncollins.github.io/explr/).
+Find more examples and documentation [here](https://johncollins.github.io/explr/).

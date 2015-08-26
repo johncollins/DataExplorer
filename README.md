@@ -13,7 +13,7 @@ library(devtools)
 Then:
 
 ```R
-install_github('explr', 'johncollins')
+install_github('johncollins/explr')
 library(explr)
 ```
 
